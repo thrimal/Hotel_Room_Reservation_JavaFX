@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="BillingForm" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: #212139;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BillingFormController">
+   <children>
+      <Label alignment="CENTER" layoutX="274.0" layoutY="14.0" text="STAR HOTEL ROOM RESERVATION SERVICE" textFill="#ebebeb">
+         <font>
+            <Font name="Bauhaus 93" size="45.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="250.0" layoutY="74.0" prefHeight="618.0" prefWidth="1000.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTextField fx:id="txtCustomerId" focusColor="#0100ff" labelFloat="true" layoutX="83.0" layoutY="122.0" prefHeight="25.0" prefWidth="370.0" promptText="Customer ID " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtReservationId" focusColor="#0100ff" labelFloat="true" layoutX="83.0" layoutY="72.0" onAction="#searchReservationOnAction" prefHeight="25.0" prefWidth="370.0" promptText="Reservation ID / Search Reservation" style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtRoomId" focusColor="#0100ff" labelFloat="true" layoutX="83.0" layoutY="234.0" prefHeight="25.0" prefWidth="370.0" promptText="Room ID " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtPayment" focusColor="#0100ff" labelFloat="true" layoutX="544.0" layoutY="294.0" prefHeight="25.0" prefWidth="370.0" promptText="Payment " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtReservationDate" focusColor="#0100ff" labelFloat="true" layoutX="83.0" layoutY="294.0" prefHeight="25.0" prefWidth="370.0" promptText="Reservation Date " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtInDate" focusColor="#0100ff" labelFloat="true" layoutX="544.0" layoutY="72.0" prefHeight="25.0" prefWidth="370.0" promptText="In Date " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <JFXTextField fx:id="txtOutDate" focusColor="#0100ff" labelFloat="true" layoutX="544.0" layoutY="122.0" prefHeight="25.0" prefWidth="370.0" promptText="Out Date " style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font></JFXTextField>
+            <Label layoutX="350.0" layoutY="14.0" text="Billing &amp; Search ">
+               <font>
+                  <Font name="System Bold" size="35.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="btnCancelBooking" layoutX="182.0" layoutY="366.0" onAction="#btnCancelBookingOnAction" prefHeight="25.0" prefWidth="173.0" style="-fx-background-color: #ff5656; -fx-background-radius: 30;" text="Cancel Booking">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </JFXButton>
+            <TableView fx:id="tblReservation" layoutX="32.0" layoutY="450.0" prefHeight="159.0" prefWidth="936.0">
+               <columns>
+                  <TableColumn fx:id="colReservationId" prefWidth="89.00003051757812" text="Reservation ID" />
+                  <TableColumn fx:id="colCustomerId" prefWidth="77.0" text="Customer ID" />
+                  <TableColumn fx:id="colServiceId" prefWidth="63.0" text="Service ID" />
+                  <TableColumn fx:id="colRoomId" minWidth="8.0" prefWidth="59.0" text="Room ID" />
+                  <TableColumn fx:id="colReservationDate" prefWidth="75.0" text="Reser Date" />
+                  <TableColumn fx:id="colCheckInDate" prefWidth="89.0" text=" In Date" />
+                  <TableColumn fx:id="colCheckOutDate" prefWidth="75.0" text="Out Date" />
+                  <TableColumn fx:id="colServiceTerms" prefWidth="84.0" text="Service Terms" />
+                  <TableColumn fx:id="colServiceAmount" prefWidth="100.0" text="Service Amount" />
+                  <TableColumn fx:id="colFullPayment" prefWidth="221.0" text="Full Payment" />
+               </columns>
+            </TableView>
+            <JFXTextField fx:id="txtServiceId" focusColor="#0100ff" labelFloat="true" layoutX="83.0" layoutY="177.0" prefHeight="25.0" prefWidth="370.0" promptText="Service ID" style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtServiceTerms" focusColor="#0100ff" labelFloat="true" layoutX="544.0" layoutY="177.0" prefHeight="25.0" prefWidth="370.0" promptText="Service Terms" style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtServiceAmount" focusColor="#0100ff" labelFloat="true" layoutX="544.0" layoutY="234.0" prefHeight="25.0" prefWidth="370.0" promptText="Service Amount" style="-fx-background-color: #ffffff;" unFocusColor="#00ff2e">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="btnBill" layoutX="643.0" layoutY="366.0" onAction="#btnBillOnAction" prefHeight="25.0" prefWidth="173.0" style="-fx-background-color: #00ff66; -fx-background-radius: 30;" text=" Bill">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="btnMain" layoutX="55.0" layoutY="19.0" onAction="#btnMainOnAction" prefHeight="29.0" prefWidth="146.0" style="-fx-background-color: #c9a273;" text="Main">
+         <font>
+            <Font name="Jokerman" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane layoutY="74.0" prefHeight="694.0" prefWidth="250.0" style="-fx-background-color: black;">
+         <children>
+            <Separator layoutX="6.0" layoutY="74.0" prefHeight="2.0" prefWidth="250.0" />
+            <Separator layoutX="6.0" layoutY="154.0" prefHeight="11.0" prefWidth="250.0" />
+            <Separator layoutX="5.0" layoutY="246.0" prefHeight="2.0" prefWidth="250.0" />
+            <Separator layoutX="6.0" layoutY="334.0" prefHeight="2.0" prefWidth="250.0" />
+            <ImageView fitHeight="55.0" fitWidth="67.0" layoutX="98.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-customer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="48.0" prefHeight="27.0" prefWidth="161.0" text="Manage Customer " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="104.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="129.0" prefHeight="27.0" prefWidth="146.0" text="Manage Rooms " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="110.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../asserts/img-item.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="216.0" prefHeight="27.0" prefWidth="138.0" text="Manage Service " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="110.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-order.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="307.0" prefHeight="27.0" prefWidth="161.0" text="Add Reservation " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="102.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/expensive_price_100px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="51.0" layoutY="396.0" prefHeight="27.0" prefWidth="185.0" text="Billing &amp; Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="6.0" layoutY="425.0" prefHeight="2.0" prefWidth="250.0" />
+            <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="104.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/search.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="488.0" prefHeight="27.0" prefWidth="185.0" text="All Reservations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="6.0" layoutY="516.0" prefHeight="2.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnCustomerForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="1.0" layoutY="4.0" onAction="#CustomerFormClick" prefHeight="74.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnRoomForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="-2.0" layoutY="75.0" onAction="#RoomFormClick" prefHeight="81.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnServiceForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="160.0" onAction="#ServiceFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnReservationForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="249.0" onAction="#ReservationFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnSearchForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="337.0" onAction="#SearchFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnAllReservation" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="428.0" onAction="#AllReservationClick" prefHeight="88.0" prefWidth="250.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

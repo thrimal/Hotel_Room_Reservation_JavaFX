@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="MainForm" prefHeight="768.0" prefWidth="1366.0" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainFormController">
+   <children>
+      <ImageView fitHeight="768.0" fitWidth="1366.0" opacity="0.85" pickOnBounds="true">
+         <image>
+            <Image url="@../asserts/sara-dubler-Koei_7yYtIo-unsplash.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="272.0" layoutY="14.0" prefHeight="52.0" prefWidth="822.0" text="STAR HOTEL ROOM RESERVATION SERVICE" textFill="#2d2f2f">
+         <font>
+            <Font name="Bauhaus 93" size="45.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btnLogOut" layoutX="645.0" layoutY="129.0" onAction="#logOutOnAction" prefHeight="18.0" prefWidth="185.0" style="-fx-background-color: #ff5656; -fx-background-radius: 30;" text="Log Out">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </JFXButton>
+      <AnchorPane prefHeight="768.0" prefWidth="256.0" style="-fx-background-color: black;">
+         <children>
+            <Separator layoutX="6.0" layoutY="74.0" prefHeight="2.0" prefWidth="250.0" />
+            <Separator layoutX="6.0" layoutY="154.0" prefHeight="11.0" prefWidth="250.0" />
+            <Separator layoutX="5.0" layoutY="246.0" prefHeight="2.0" prefWidth="250.0" />
+            <Separator layoutX="6.0" layoutY="334.0" prefHeight="2.0" prefWidth="250.0" />
+            <ImageView fitHeight="55.0" fitWidth="67.0" layoutX="98.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-customer.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="56.0" layoutY="48.0" prefHeight="27.0" prefWidth="161.0" text="Manage Customer " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="51.0" fitWidth="55.0" layoutX="104.0" layoutY="82.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="58.0" layoutY="129.0" prefHeight="27.0" prefWidth="146.0" text="Manage Rooms " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="54.0" layoutX="110.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+               <image>
+                  <Image url="@../asserts/img-item.png" />
+               </image>
+               <effect>
+                  <ColorAdjust brightness="1.0" />
+               </effect>
+            </ImageView>
+            <Label layoutX="66.0" layoutY="216.0" prefHeight="27.0" prefWidth="138.0" text="Manage Service " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="52.0" fitWidth="55.0" layoutX="110.0" layoutY="259.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/img-order.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="OPEN_HAND" />
+               </cursor>
+            </ImageView>
+            <Label layoutX="60.0" layoutY="307.0" prefHeight="27.0" prefWidth="161.0" text="Add Reservation " textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="102.0" layoutY="346.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/expensive_price_100px.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="51.0" layoutY="396.0" prefHeight="27.0" prefWidth="185.0" text="Billing &amp; Payment" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="6.0" layoutY="425.0" prefHeight="2.0" prefWidth="250.0" />
+            <ImageView fitHeight="55.0" fitWidth="66.0" layoutX="104.0" layoutY="433.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asserts/search.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="54.0" layoutY="488.0" prefHeight="27.0" prefWidth="185.0" text="All Reservations" textFill="WHITE">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Separator layoutX="6.0" layoutY="516.0" prefHeight="2.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnCustomerForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="1.0" layoutY="4.0" onAction="#CustomerFormClick" prefHeight="74.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnRoomForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="-2.0" layoutY="75.0" onAction="#RoomFormClick" prefHeight="81.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnServiceForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutY="160.0" onAction="#ServiceFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnReservationForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="249.0" onAction="#ReservationFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnSearchForm" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="337.0" onAction="#SearchFormClick" prefHeight="88.0" prefWidth="250.0" />
+            <JFXButton fx:id="btnAllReservation" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" layoutX="6.0" layoutY="428.0" onAction="#AllReservationClick" prefHeight="88.0" prefWidth="250.0" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
